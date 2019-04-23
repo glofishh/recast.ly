@@ -11,10 +11,10 @@ import VideoListEntry from "../components/VideoListEntry.js";
 //   </div>
 // );
 
-var VideoList = (props) => (
+var VideoList = ({videos, onVideoClick}) => (
   <div className="video-list">
-    {props.videos.map(video =>
-      <VideoListEntry video={video} />
+    {videos.map(video =>
+      <VideoListEntry video={video} onVideoClick={onVideoClick} />
     )}
   </div>
 );
