@@ -1,4 +1,6 @@
-import exampleVideoData from "../data/exampleVideoData";
+import exampleVideoData from "../data/exampleVideoData.js";
+import VideoList from "../components/VideoList.js";
+
 
 var App = () => (
   <div>
@@ -13,7 +15,7 @@ var App = () => (
       </div>
       <div className="col-md-5">
         <div><h5><em>videoList</em> view goes here</h5></div>
-        <VideoList videos={exampleVideoData[0]}/>
+        <VideoList videos={exampleVideoData}/>
       </div>
     </div>
   </div>
