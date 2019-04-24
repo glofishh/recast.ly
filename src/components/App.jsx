@@ -12,6 +12,20 @@ class App extends React.Component {
     };
   }
 
+  getYouTubeVideos(query) {
+    var options = {
+      key: this.props.API_KEY,
+      query: query
+    };
+
+    this.props.searchYouTube({key, query, max}, (videos) =>
+      this.setState({
+        videos: videos,
+        currentVideo: videos[0]
+      })
+    );
+  }
+
   onVideoClick(video) {
     this.setState({current: video});
   }
